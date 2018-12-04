@@ -7,7 +7,9 @@ class App extends React.Component {
 
     // this is the only time do direct assign state
     this.state = { lat: null, errorMessage: "" };
+  }
 
+  componentDidMount() {
     window.navigator.geolocation.getCurrentPosition(
       position => {
         this.setState({ lat: position.coords.latitude });
@@ -19,6 +21,10 @@ class App extends React.Component {
         this.setState({ errorMessage: err.message });
       }
     );
+  }
+
+  componentDidUpdate() {
+    console.log("component just update and re-render");
   }
 
   render() {
