@@ -12,6 +12,16 @@ export const fetchPosts = () => {
   };
 };
 
+//condensed format without return but same as above
+// export const fetchUser = id => async dispatch => {
+//   const response = await jsonPlaceholder.get(`/users/${id}`);
+//   //console.log(response.data);
+//   dispatch({
+//     type: "FETCH_USER",
+//     payload: response.data
+//   });
+// };
+
 //memoized version to fetch once and use it
 export const fetchUser = id => dispatch => {
   _fetchUser(id, dispatch);
