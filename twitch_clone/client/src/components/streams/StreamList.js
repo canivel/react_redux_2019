@@ -31,7 +31,7 @@ export class StreamList extends Component {
       return (
         <div>
           <Link to="/streams/new" className="ui button large primary">
-            Create new Strean
+            Create new Stream
           </Link>
         </div>
       );
